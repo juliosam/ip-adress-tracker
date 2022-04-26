@@ -21,13 +21,11 @@ body{margin: 0;}
     width: 99.2vw;
     z-index: 0;}
 
-#map img{ z-index: 4;}
-
 .loc-icon{
     height: 45px;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 45%;
+    left: 48%;
 }
 
 .container{
@@ -118,5 +116,46 @@ body{margin: 0;}
 }
 
 
+@media (max-width:860px){
+
+    .title{
+        margin-top: 150px;
+    }
+
+    .searcher__input{ 
+        width: 260px;
+        padding: 6px ;
+    }
+
+    #map{ height: 60vh;  
+    }
+    
+    .container{
+        height: 40vh;
+    }
+
+    .data-bar{
+        display: block;
+        width: 325px;
+        margin-top: 20px;
+        padding: 10px;
+    }
+
+    .data-bar li{
+        display: block;
+        border: none
+    }
+
+    .data-bar__title{font-size: 10px; margin-bottom: 4px;}
+
+    .data-bar__info{font-size: 20px; margin-bottom: 4px;}
+
+    .leaflet-control-zoom{ top: 180px; }
+
+    .loc-icon{
+        left: 46%;
+    }
+
+}
 
 

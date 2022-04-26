@@ -1,0 +1,51 @@
+*{box-sizing: border-box;}
+
+body{margin: 0;}
+
+h2{ margin-top: 40px;}
+
+.background-container{ 
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#map{ height: 64vh;  width: 99.2vw;}
+
+.container{
+    width: 99.2vw;
+    height: 35vh;
+    background-image: url(images/pattern-bg.png);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.data-bar{
+    margin: 0; padding: 20px;
+    background-color: aliceblue;
+    display: flex;
+    z-index: 2;
+    width: 500px;
+    border-radius: 10px;
+}
+
+.data-bar li{
+    display: inline-block;
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid black;
+}
+
+/* .data-bar:last-child{ */
+    /* border-right: none} */
+
+.searcher{
+    width: 300px;
+    margin-bottom: 30px;
+}
+
+
+

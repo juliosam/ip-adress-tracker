@@ -2,56 +2,53 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
    crossorigin=""/>
-
   <link rel="stylesheet" type="text/css" href="style.css">
   <title>Frontend Mentor | IP Address Tracker</title>
-
   
 </head>
 <body>
   <div class="background-container">
     <div class="container">
-      <h2>IP Address Tracker</h2>
-      <div>
-        <input class="searcher" type="search">
-        <button class="go"><img src="images/icon-arrow.svg"></button>
+      <h2 class="title">IP Address Tracker</h2>
+      <div class= "searcher">
+        <input class="searcher__input" type="search">
+        <button class="searcher__btn"><img src="images/icon-arrow.svg"></button>
       </div>
       <ul class="data-bar">
         <li class="data-bar__ip">
-          <h4 class="data-bar__title">IP Address</h4>
-          <span class="data-bar__info ip"></span>
+          <h4 class="data-bar__title">IP ADDRESS</h4>
+          <span class="data-bar__info ip">189.212.174.101</span>
           </li>
         <li class="data-bar__location">
-          <h4 class="data-bar__title">Location</h4>
-          <span class="data-bar__info location"></span>
+          <h4 class="data-bar__title">LOCATION</h4>
+          <span class="data-bar__info location">Reynosa, Tamps, 88700</span>
           </li>
         <li class="data-bar__timezone">
-          <h4 class="data-bar__title">Timezone</h4>
-          <span class="data-bar__info timezone"></span>
+          <h4 class="data-bar__title">TIMEZONE</h4>
+          <span class="data-bar__info timezone">UTC-05:00</span>
           </li>
         <li class="data-bar__iSP">
           <h4 class="data-bar__title">ISP</h4>
-          <span class="data-bar__info isp"></span>
+          <span class="data-bar__info isp">La secu de la chicho</span>
           </li>
       </ul>
     </div> 
-    <div id="map"></div>
+    <div class="map-container">
+      <div id="map"></div>
+      <img  class="loc-icon" src="images/icon-location.svg">
+    </div>
   </div>
-  
-  
 
-  <!-- IP Address Tracker
-  Search for any IP address or domain
-  UTC ----add offset value dynamically using the API -->
-  
-  
   <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
    crossorigin=""></script>

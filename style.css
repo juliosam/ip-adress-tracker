@@ -1,8 +1,13 @@
-*{box-sizing: border-box;}
+*{box-sizing: border-box;
+ font-family: sans-serif;}
 
 body{margin: 0;}
 
-h2{ margin-top: 40px;}
+.title{ 
+    margin-top: 100px;
+    color: white;
+    font-size: 27px;
+}
 
 .background-container{ 
     width: 100vw;
@@ -10,7 +15,20 @@ h2{ margin-top: 40px;}
     overflow: hidden;
 }
 
-#map{ height: 64vh;  width: 99.2vw;}
+.map-container{ position: relative;}
+
+#map{ height: 64vh;  
+    width: 99.2vw;
+    z-index: 0;}
+
+#map img{ z-index: 4;}
+
+.loc-icon{
+    height: 45px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
 
 .container{
     width: 99.2vw;
@@ -25,27 +43,80 @@ h2{ margin-top: 40px;}
 
 .data-bar{
     margin: 0; padding: 20px;
-    background-color: aliceblue;
+    background-color: white;
     display: flex;
     z-index: 2;
-    width: 500px;
-    border-radius: 10px;
+    width: 75%;
+    border-radius: 14px;
+    margin-top: 40px;
 }
 
 .data-bar li{
     display: inline-block;
     flex: 1;
     text-align: center;
-    border-right: 1px solid black;
+    border-right: 1px solid hsl(0, 0%, 79%);
+    margin: 14px 0 14px 0;
 }
 
-/* .data-bar:last-child{ */
-    /* border-right: none} */
+.data-bar__title{
+    font-size: 11px;
+    color: hsl(0, 0%, 59%);
+    font-weight: 700;
+    margin: 5px 0 10px 0;
+}
+
+.data-bar__info{
+    font-size: 22px;
+    color: black;
+    font-weight: 700;
+}
+
+ .data-bar li:last-child{ 
+     border: none} 
 
 .searcher{
-    width: 300px;
-    margin-bottom: 30px;
+    background-color: white;
+    border-radius: 12px;
+    padding-left: 10px;
 }
+
+.searcher__input{
+    width: 420px;
+    margin: 0;
+    display: inline;
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    height: 48px;
+    border-radius: 12px 0 0 12px;
+}
+
+.searcher__input:hover{
+    cursor: pointer;
+}
+
+.searcher__input:focus{
+    outline: none;
+}
+
+.searcher__btn{   
+    display: inline;
+    border: none;
+    background-color: hsl(0, 0%, 17%);
+    height: 49px;
+    width: 52px;
+    border-radius: 0 12px 12px 0;
+}
+
+.searcher__btn:hover{
+    cursor: pointer;
+}
+
+.searcher__btn:active{
+    background-color: rgb(0, 87, 128);
+}
+
 
 
 

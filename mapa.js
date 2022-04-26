@@ -1,6 +1,6 @@
 let map = L.map('map').setView([26.07,-98.31],19);
-let searchInput = document.querySelector('.searcher');
-let searchBtn = document.querySelector('.go');
+let searchInput = document.querySelector('.searcher__input');
+let searchBtn = document.querySelector('.searcher__btn');
 let ipOutput = document.querySelector('.ip')
 let locationOutput = document.querySelector('.location')
 let timeZoneOutput = document.querySelector('.timezone')
@@ -20,6 +20,12 @@ let goNow = function(){
    .then(response => response.json())
    .then(data => {
        console.log(data)
+       if(data.code == 422){  
+           ipOutput.innerHTML = "please enter a valid ip value"
+          locationOutput.innerHTML = "please enter a valid ip value"
+          timeZoneOutput.innerHTML = "please enter a valid ip value"
+          ispOutput.innerHTML = "please enter a valid ip value"
+    return }
        map.remove();
        map = L.map('map').setView([data.location.lat,data.location.lng],19);
        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
